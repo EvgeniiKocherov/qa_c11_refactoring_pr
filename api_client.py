@@ -8,6 +8,7 @@
   - get_courier_by_id(self, courier_id: int)
   - create_courier(self, data: dict)
   - delete_courier(self, courier_id: int)
+
 """
 import requests
 
@@ -42,3 +43,4 @@ class CourierAPIClient:
         response = requests.delete(url, headers=headers)
         response.raise_for_status()
         return response.json()
+

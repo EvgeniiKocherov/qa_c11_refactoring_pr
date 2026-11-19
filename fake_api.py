@@ -26,7 +26,9 @@ def get_courier(courier_id):
     auth_error = _check_auth()
     if auth_error:
         return auth_error
+
     courier = _couriers.get(courier_id)
+
     if courier is None:
         return jsonify({"error": "Courier not found"}), 404
     return jsonify(courier), 200

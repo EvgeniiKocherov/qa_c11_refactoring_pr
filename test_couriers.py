@@ -14,6 +14,7 @@ def client():
     auth_token = os.getenv("AUTH_TOKEN", "test_token_123")
     return CourierAPIClient(base_url=base_url, auth_token=auth_token)
 
+
 @pytest.fixture
 def new_courier_data():
     """Данные для создания нового курьера."""
